@@ -2,7 +2,7 @@
 
 output "peer_vpc_id" {
   description = "The ID of the VPC with which you are creating the VPC Peering Connection"
-  value       = try(aws_vpc_peering_connection.k8s.aws_vpc_peering_connection, "")
+  value       = try(aws_vpc_peering_connection.k8s.peer_vpc_id, "")
 }
 
 output "vpc_id" {
